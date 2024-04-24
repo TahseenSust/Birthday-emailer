@@ -24,6 +24,6 @@ const checkBirthdayOfCustomers = async () => {
 };
 
 // Schedule birthday wishes
-cron.schedule("* * * * * *", async () => {
+cron.schedule("0 0 0 * * *", async () => {
   await checkBirthdayOfCustomers();
 });
