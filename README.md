@@ -46,12 +46,12 @@ Birthday Emailer is a Node.js application that sends birthday wishes to customer
 
 ```bash
 curl -X POST \
-     http://localhost:3000/customer/register \
-     -H 'Content-Type: application/json' \
-     -d '{
-       "name": "tahseen",
-       "email": "tahseen.swe@gmail.com",
-       "birthday": "1990-04-25"
-   }'
+  http://localhost:3000/customer/register \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "tahseen",
+    "email": "tahseen.swe@gmail.com",
+    "birthday": "1990-04-25"
+}'
 
 ```
