@@ -45,6 +45,13 @@ Birthday Emailer is a Node.js application that sends birthday wishes to customer
 2 . Register customers:You can register customers by sending a POST request to /customer/register with JSON data containing customer details.Example:
 
 ```bash
-    curl -X POST -H "Content-Type: application/json" -d '{"name":"John Doe","email":"john@example.com","birthday":"1990-04-25"}' http://localhost:3000/customer/register
+    curl -X POST \
+     http://localhost:3000/customer/register \
+     -H 'Content-Type: application/json' \
+     -d '{
+       "name": "tahseen",
+       "email": "tahseen.swe@gmail.com",
+       "birthday": "1990-04-25"
+   }'
 
 ```
