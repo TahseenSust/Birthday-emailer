@@ -18,17 +18,17 @@ Birthday Emailer is a Node.js application that sends birthday wishes to customer
 
    ```
 
-3. Set up the database:Create a PostgreSQL database named birthday_wisher:
+3. Set up the database: Run PostgreSQL database from docker:
 
    ```base
-   psql -U your_username -c "CREATE DATABASE birthday_wisher"
+   docker run -it -e "POSTGRES_HOST_AUTH_METHOD=trust" -p 5432:5432 postgres
 
    ```
 
 4. Set up environment variables: Create a .env file in the root directory and add the following variables:
    ```bash
    PORT=3000
-   DATABASE_URL=postgres://your_username:your_password@localhost:5432/birthday_wisher
+   DATABASE_URL=postgres://your_username:your_password@localhost:5432/postgres
    SMTP_HOST=smtp.example.com
    SMTP_PORT=587
    EMAIL_ADDRESS=your_email@example.com
