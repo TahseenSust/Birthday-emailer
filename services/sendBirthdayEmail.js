@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+const htmlContent = require("../utils/birthdayEmail");
 
 // Function to send birthday email
 const sendBirthdayEmail = (name, email) => {
@@ -18,7 +19,7 @@ const sendBirthdayEmail = (name, email) => {
     to: email, // Recipient address
     subject: "Happy Birthday!", // Subject line
     text: `Happy Birthday, ${name}!`, // Plain text body
-    html: `<p>Happy Birthday, ${name}!</p>`, // HTML body
+    html: htmlContent(name),
   };
 
   // Send email
